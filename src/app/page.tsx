@@ -311,14 +311,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {[
                 { src: '/hero/high-performance-hardware.png', alt: 'Tecnologia de Alta Performance' },
-                { src: '/hero/gallery-02.png', alt: 'Ferramentas de Precisão' },
+                { src: '/hero/precision-notebook-hardware.png', alt: 'Manutenção e Upgrades Físicos de Notebooks' },
                 { src: '/hero/gallery-03.png', alt: 'Componentes de Alta Tecnologia' },
                 { src: '/services/performance-workstation.png', alt: 'Estação de Trabalho de Alta Performance' },
                 { src: '/services/gallery-05.png', alt: 'Infraestrutura Tecnológica' },
                 { src: '/hero/gallery-06.png', alt: 'Configuração de Alto Desempenho' },
               ].map((img, i) => (
                 <AnimateIn key={i} delay={0.1 * i}>
-                  <div className="group relative aspect-square rounded-2xl overflow-hidden border border-white/10 hover:border-white/25 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.5)] card-3d">
+                  <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-white/25 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.5)] card-3d">
                     <Image
                       src={img.src}
                       alt={img.alt}
@@ -327,9 +327,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                       sizes="(max-width: 768px) 50vw, 33vw"
                     />
                     {/* Gradient overlay no hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
                     {/* Glow verde sutil no canto */}
-                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
                   </div>
                 </AnimateIn>
               ))}
