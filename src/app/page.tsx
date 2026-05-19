@@ -145,6 +145,7 @@ export default function Home() {
                       src="/services/infografico-processo.webp" 
                       alt="Fluxo de trabalho e qualidade" 
                       fill 
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
                     />
                     {/* Overlay sutil para manter o estilo glass */}
@@ -165,6 +166,7 @@ export default function Home() {
                       src="/services/resumo-servicos.webp" 
                       alt="Soluções corporativas e diferenciais" 
                       fill 
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />

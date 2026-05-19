@@ -41,6 +41,7 @@ export function ImageModal({ src, alt, label, children, className }: ImageModalP
                             src={src}
                             alt={alt}
                             fill
+                            sizes="(max-width: 1024px) 95vw, 1024px"
                             className="object-contain"
                             quality={100}
                         />

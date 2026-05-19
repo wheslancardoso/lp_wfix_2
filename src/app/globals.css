@@ -754,6 +754,19 @@ body {
   }
 }
 
+/* Aceleração de hardware via GPU para animações de background e orbes */
+.animate-hero-bg-1,
+.animate-hero-bg-2,
+.animate-hero-bg-3 {
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+}
+
+.fixed.pointer-events-none.z-0.overflow-hidden div {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
 .animate-hero-bg-1 {
   animation: hero-bg-fade 15s infinite 0s;
 }
