@@ -269,7 +269,7 @@ export default function Home() {
         <GlowLine />
 
         {/* SEÇÃO VISUAL — Infográficos de Processo e Serviços (Full-Bleed Otimizado) */}
-        <section className="py-2 md:py-8 relative overflow-hidden">
+        <section className="py-10 md:py-16 relative overflow-hidden">
           <div className="max-w-[1600px] mx-auto px-0 sm:px-4 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
               
