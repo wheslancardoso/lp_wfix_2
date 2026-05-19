@@ -194,7 +194,7 @@ export default async function Home() {
                     <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
                   <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Diagnóstico Preciso</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Evitamos surpresas. O valor final é estabelecido somente após a avaliação física detalhada do equipamento.</p>
+                  <p className="text-sm text-white/60 leading-relaxed">Clareza absoluta. A definição do escopo e etapas ocorre somente após a análise presencial.</p>
                 </div>
               </AnimateIn>
             </div>
@@ -262,8 +262,8 @@ export default async function Home() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {[
-                { src: '/hero/high-performance-hardware.webp', alt: 'Equipamento moderno e inovador' },
-                { src: '/hero/precision-notebook-hardware.webp', alt: 'Hardware moderno de alta precisão' },
+                { src: '/hero/high-performance-hardware.webp', alt: 'Tecnologia moderna e inovadora' },
+                { src: '/hero/precision-notebook-hardware.webp', alt: 'Estrutura tecnológica de alta precisão' },
                 { src: '/hero/gallery-03.webp', alt: 'Inovação e engenharia moderna' },
                 { src: '/services/performance-workstation.webp', alt: 'Tecnologia para alta produtividade' },
                 { src: '/services/technology-infrastructure.webp', alt: 'Infraestrutura de ponta e tecnologia' },
