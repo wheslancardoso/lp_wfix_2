@@ -122,6 +122,19 @@ export default function Home() {
               </Button>
             </AnimateIn>
 
+            <AnimateIn delay={0.5}>
+              <div className="flex items-center justify-center gap-2 mt-4 text-white/50 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] pointer-events-none">
+                <div className="flex items-center gap-0.5 text-yellow-500">
+                  <Star className="w-3 h-3 fill-current" />
+                  <Star className="w-3 h-3 fill-current" />
+                  <Star className="w-3 h-3 fill-current" />
+                  <Star className="w-3 h-3 fill-current" />
+                  <Star className="w-3 h-3 fill-current" />
+                </div>
+                <span>4.9/5 • +350 avaliações no google maps</span>
+              </div>
+            </AnimateIn>
+
           </div>
         </section>
 
