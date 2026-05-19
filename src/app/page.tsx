@@ -19,7 +19,7 @@ export function generateMetadata() {
 export default function Home() {
   const { whatsappNumber, formattedPhone, brandName } = getTenantData()
 
-  const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento.`
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista.`
 
   return (
     <div className="dark flex min-h-screen flex-col bg-black text-white noise-overlay">
@@ -137,7 +137,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
             <AnimateIn>
               <h2 className="text-3xl md:text-5xl font-black uppercase mb-2 tracking-tighter">Nossos Diferenciais</h2>
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] mb-12 md:mb-16 font-bold text-white/30 italic">Estrutura, qualidade e atendimento</p>
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] mb-12 md:mb-16 font-bold text-white/30 italic">Comodidade, precisão e seriedade</p>
             </AnimateIn>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -147,8 +147,8 @@ export default function Home() {
                   <div className="animate-float-subtle">
                     <MapPin className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Presença Local</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Atuação em Goiânia e região, com estrutura física para facilitar o contato.</p>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Atendimento Domiciliar</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">Máxima conveniência em Goiânia e região. Nós nos deslocamos até o seu endereço para total praticidade.</p>
                 </div>
               </AnimateIn>
 
@@ -158,8 +158,8 @@ export default function Home() {
                   <div className="animate-float-subtle" style={{ animationDelay: '2s' }}>
                     <ShieldCheck className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Garantia de 180 dias</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Confiança total no que fazemos. Todos os trabalhos com garantia estendida.</p>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Até 180 dias de Garantia</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">Segurança e seriedade. Condições especiais de garantia de longo prazo para clientes qualificados.</p>
                 </div>
               </AnimateIn>
 
@@ -169,8 +169,8 @@ export default function Home() {
                   <div className="animate-float-subtle" style={{ animationDelay: '4s' }}>
                     <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Atendimento Rápido</h3>
-                  <p className="text-sm text-white/60 leading-relaxed italic">Canal direto pelo WhatsApp. Resposta e orçamento sem enrolação.</p>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Diagnóstico Preciso</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">Evitamos surpresas. O valor final é estabelecido somente após a avaliação física detalhada do equipamento.</p>
                 </div>
               </AnimateIn>
             </div>
