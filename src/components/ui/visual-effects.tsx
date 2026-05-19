@@ -104,13 +104,14 @@ export function GridBackground() {
 
 export function GlowLine() {
     return (
-        <div className="relative w-full h-[1px] my-8 overflow-hidden">
+        <div className="relative w-full h-[1px] my-6 md:my-8 overflow-hidden">
             <div className="absolute inset-0 bg-white/5" />
             <div
-                className="absolute h-full w-1/3 hidden md:block"
+                className="absolute h-full w-1/2 sm:w-1/3"
                 style={{
-                    background: 'linear-gradient(90deg, transparent, hsl(150 100% 50% / 0.6), transparent)',
-                    animation: 'glow-sweep 4s ease-in-out infinite',
+                    background: 'linear-gradient(90deg, transparent, hsl(142 72% 50% / 0.8), transparent)',
+                    animation: 'glow-sweep 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+                    willChange: 'left',
                 }}
             />
         </div>
