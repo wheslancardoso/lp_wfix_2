@@ -9,7 +9,7 @@ import { FloatingOrbs, GridBackground, GlowLine, MouseGlow, ParticleField } from
 import { getTenantData } from '@/lib/get-tenant-data'
 import { getReviewsStats } from '@/lib/reviews'
 
-export const revalidate = 60; // Revalida a cada 60 segundos (Incremental Static Regeneration)
+export const revalidate = 86400; // Revalida a cada 24 horas (Incremental Static Regeneration)
 
 export function generateMetadata() {
   const { brandName } = getTenantData()
