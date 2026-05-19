@@ -54,7 +54,7 @@ export default function Home() {
               src="/hero/hero-01.webp"
               alt="Design e inovação em ambiente tecnológico"
               fill
-              quality={100}
+              quality={85}
               className="object-cover object-[center_35%] md:object-[center_40%] brightness-[0.5] contrast-[1.1] md:blur-[2px] animate-hero-bg-1 opacity-0 absolute"
               sizes="100vw"
               priority
@@ -67,7 +67,7 @@ export default function Home() {
               src="/hero/hero-02.webp"
               alt="Espaço corporativo moderno"
               fill
-              quality={100}
+              quality={85}
               className="object-cover object-center md:object-[center_30%] brightness-[0.5] contrast-[1.1] md:blur-[2px] animate-hero-bg-2 opacity-0 absolute"
               sizes="100vw"
               style={{
@@ -79,7 +79,7 @@ export default function Home() {
               src="/hero/hero-03.webp"
               alt="Estrutura moderna e de alta qualidade"
               fill
-              quality={100}
+              quality={85}
               className="object-cover object-[center_20%] md:object-[center_40%] brightness-[0.4] contrast-[1.1] md:blur-[2px] animate-hero-bg-3 opacity-0 absolute"
               sizes="100vw"
               style={{
