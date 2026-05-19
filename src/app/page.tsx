@@ -174,8 +174,8 @@ export default async function Home() {
                   <div className="animate-float-subtle">
                     <MapPin className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Atendimento Domiciliar</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Máxima conveniência. Nós nos deslocamos até você para total praticidade, com a maioria das soluções em 24h a 48h.</p>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Atendimento On-Site</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">Máxima conveniência. Deslocamento de especialistas até o seu local para total praticidade, com a maioria das demandas solucionadas em 24h a 48h.</p>
                 </div>
               </AnimateIn>
 
