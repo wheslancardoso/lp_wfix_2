@@ -58,7 +58,6 @@ export default async function Home() {
               quality={85}
               className="object-cover object-[center_35%] md:object-[center_40%] brightness-[0.5] contrast-[1.1] md:blur-[2px] animate-hero-bg-1 opacity-0 absolute"
               sizes="(max-width: 1080px) 100vw, 1080px"
-              priority
               style={{
                 maskImage: 'linear-gradient(to top, transparent 0%, black 60%)',
                 WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 60%)',
