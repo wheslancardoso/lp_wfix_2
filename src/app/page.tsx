@@ -193,7 +193,7 @@ export default async function Home() {
                   <div className="animate-float-subtle" style={{ animationDelay: '4s' }}>
                     <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Diagnóstico Preciso</h3>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Análise Precisa</h3>
                   <p className="text-sm text-white/60 leading-relaxed">Clareza absoluta. A definição do escopo e etapas ocorre somente após a análise presencial.</p>
                 </div>
               </AnimateIn>
