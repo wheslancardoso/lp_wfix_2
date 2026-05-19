@@ -128,10 +128,10 @@ export default async function Home() {
 
             <AnimateIn delay={0.5}>
               <a
-                href="https://g.page/r/CSEBt1JqKDjlEBM/review"
+                href="https://www.google.com/maps/place/WFIX+Tech/@-16.6403881,-49.1617139,17z/data=!4m8!3m7!1s0x935eed36ddc0c8fb:0xe538286a52b70121!8m2!3d-16.6403881!4d-49.1617139!9m1!1b1!16s%2Fg%2F11yy4_wtds?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 mt-4 text-white/40 hover:text-white/70 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] transition-colors duration-300"
+                className="inline-flex items-center justify-center gap-2.5 mt-5 px-4 py-2 rounded-full bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.05] hover:border-white/[0.12] text-white/40 hover:text-white/80 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.18em] transition-all duration-300 backdrop-blur-sm group shadow-sm hover:shadow-md active:scale-[0.98]"
               >
                 <div className="flex items-center gap-0.5 text-yellow-500 animate-pulse">
                   <Star className="w-3 h-3 fill-current" />
@@ -140,7 +140,14 @@ export default async function Home() {
                   <Star className="w-3 h-3 fill-current" />
                   <Star className="w-3 h-3 fill-current" />
                 </div>
-                <span>{stats.averageRating.toFixed(1)}/5.0 • {stats.totalReviews} avaliações no Google Maps</span>
+                <span className="flex items-center gap-1.5">
+                  {stats.averageRating.toFixed(1)}/5.0 • Ver {stats.totalReviews} avaliações no Google Maps
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" className="w-2.5 h-2.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
+                    <path d="M15 3h6v6"/>
+                    <path d="M10 14 21 3"/>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  </svg>
+                </span>
               </a>
             </AnimateIn>
 
