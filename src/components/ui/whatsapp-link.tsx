@@ -9,7 +9,7 @@ interface WhatsAppLinkProps extends Omit<React.ComponentPropsWithoutRef<typeof L
 }
 
 export function WhatsAppLink({ phone, children, ...props }: WhatsAppLinkProps) {
-  const defaultText = "Olá! Vim pelo site e gostaria de fazer um orçamento."
+  const defaultText = "Olá! Vim pelo site e gostaria de agendar uma avaliação."
   const [href, setHref] = useState(`https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(defaultText)}`)
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export function WhatsAppLink({ phone, children, ...props }: WhatsAppLinkProps) {
       greeting = "Boa noite!"
     }
 
-    const text = `${greeting} Vim pelo site e gostaria de fazer um orçamento.`
+    const text = `${greeting} Vim pelo site e gostaria de agendar uma avaliação.`
     setHref(`https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`)
   }, [phone])
 
@@ -41,7 +41,7 @@ interface WhatsAppAnchorProps extends Omit<React.ComponentPropsWithoutRef<'a'>, 
 }
 
 export function WhatsAppAnchor({ phone, children, ...props }: WhatsAppAnchorProps) {
-  const defaultText = "Olá! Vim pelo site e gostaria de fazer um orçamento."
+  const defaultText = "Olá! Vim pelo site e gostaria de agendar uma avaliação."
   const [href, setHref] = useState(`https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(defaultText)}`)
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export function WhatsAppAnchor({ phone, children, ...props }: WhatsAppAnchorProp
       greeting = "Boa noite!"
     }
 
-    const text = `${greeting} Vim pelo site e gostaria de fazer um orçamento.`
+    const text = `${greeting} Vim pelo site e gostaria de agendar uma avaliação.`
     setHref(`https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`)
   }, [phone])
 
