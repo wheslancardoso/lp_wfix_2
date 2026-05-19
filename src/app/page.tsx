@@ -130,7 +130,7 @@ export default async function Home() {
               <a
                 href="https://www.google.com/maps/place/WFIX+Tech/@-16.6403881,-49.1617139,17z/data=!4m8!3m7!1s0x935eed36ddc0c8fb:0xe538286a52b70121!8m2!3d-16.6403881!4d-49.1617139!9m1!1b1!16s%2Fg%2F11yy4_wtds?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center justify-center gap-2.5 mt-5 px-4 py-2 rounded-full bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.05] hover:border-white/[0.12] text-white/40 hover:text-white/80 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.18em] transition-all duration-300 backdrop-blur-sm group shadow-sm hover:shadow-md active:scale-[0.98]"
               >
                 <div className="flex items-center gap-0.5 text-yellow-500 animate-pulse">
