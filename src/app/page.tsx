@@ -116,7 +116,7 @@ export default async function Home() {
               <Button size="lg" id="cta-whatsapp-hero" className="h-14 px-10 text-base font-black uppercase tracking-widest rounded-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 transform hover:scale-105 animate-glow-green mb-2 md:mb-4" asChild>
                 <WhatsAppLink phone={whatsappNumber} target="_blank">
                   <MessageCircle className="mr-2 h-5 w-5 pointer-events-none" />
-                  <span className="pointer-events-none">Iniciar Conversa</span>
+                  <span className="pointer-events-none">Agendar Avaliação</span>
                 </WhatsAppLink>
               </Button>
             </AnimateIn>
@@ -175,7 +175,7 @@ export default async function Home() {
                     <MapPin className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
                   <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Atendimento Domiciliar</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Máxima conveniência em Goiânia e região. Nós nos deslocamos até o seu endereço para total praticidade.</p>
+                  <p className="text-sm text-white/60 leading-relaxed">Máxima conveniência. Nós nos deslocamos até você para total praticidade, com a maioria das soluções em 24h a 48h.</p>
                 </div>
               </AnimateIn>
 
@@ -186,7 +186,7 @@ export default async function Home() {
                     <ShieldCheck className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
                   <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Até 180 dias de Garantia</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Segurança e seriedade. Condições especiais de garantia de longo prazo para clientes qualificados.</p>
+                  <p className="text-sm text-white/60 leading-relaxed">Garantia documentada de 30 a 180 dias. Cobertura estendida de acordo com a complexidade da solução.</p>
                 </div>
               </AnimateIn>
 
@@ -197,7 +197,7 @@ export default async function Home() {
                     <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
                   <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Análise Precisa</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Clareza absoluta. A definição do escopo e etapas ocorre somente após a análise presencial.</p>
+                  <p className="text-sm text-white/60 leading-relaxed">Avaliação técnica detalhada para definição transparente de escopo. Sem surpresas ou taxas ocultas.</p>
                 </div>
               </AnimateIn>
             </div>
@@ -224,8 +224,8 @@ export default async function Home() {
                   <div>
                     <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Horário</p>
                     <div className="text-[9px] font-bold text-white leading-tight mt-0.5">
-                      <p>Seg-Sex: a partir das 17h</p>
-                      <p>Sáb: 09h às 14h</p>
+                      <p>Flexível (Seg-Sáb)</p>
+                      <p>Sob agendamento prévio</p>
                     </div>
                   </div>
                 </div>
@@ -367,7 +367,7 @@ export default async function Home() {
                   <h2 className="text-xl font-black uppercase mb-2 pointer-events-none text-white">WhatsApp</h2>
                   <p className="text-[9px] uppercase font-bold tracking-widest text-white/30 mb-6 pointer-events-none">Resposta em 5 minutos</p>
                   <span className="bg-white/5 text-[9px] font-black px-6 py-2 rounded-full uppercase tracking-widest group-hover:bg-green-500 group-hover:text-black transition-colors pointer-events-none text-white">
-                    Iniciar Conversa
+                    Agendar Avaliação
                   </span>
                 </WhatsAppLink>
               </AnimateIn>
