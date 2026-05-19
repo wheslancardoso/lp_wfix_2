@@ -7,7 +7,7 @@ import { ImageModal } from '@/components/ui/image-modal'
 import { FloatingOrbs, GridBackground, GlowLine, MouseGlow, ParticleField } from '@/components/ui/visual-effects'
 
 import { getTenantData } from '@/lib/get-tenant-data'
-import { getActiveReviews, getReviewsStats } from '@/lib/reviews'
+import { getReviewsStats } from '@/lib/reviews'
 
 export const revalidate = 60; // Revalida a cada 60 segundos (Incremental Static Regeneration)
 
@@ -21,7 +21,6 @@ export function generateMetadata() {
 
 export default async function Home() {
   const { whatsappNumber, formattedPhone, brandName } = getTenantData()
-  const reviews = await getActiveReviews()
   const stats = await getReviewsStats()
 
   const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista.`
@@ -338,101 +337,6 @@ export default async function Home() {
               </AnimateIn>
 
             </div>
-          </div>
-        </section>
-
-        {/* Glow Line Separator */}
-        <GlowLine />
-
-        {/* DEPOIMENTOS / COMUNIDADE */}
-        <section className="py-16 md:py-24 relative overflow-hidden">
-          {/* Background glows */}
-          <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-green-500/5 rounded-full blur-[120px] pointer-events-none" />
-          
-          <div className="max-w-4xl mx-auto px-4 relative z-10">
-            <AnimateIn>
-              <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-3xl md:text-5xl font-black uppercase mb-2 tracking-tighter">O Que Diz a Nossa Comunidade</h2>
-                <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] mb-4 font-bold text-white/30 italic">Depoimentos reais e curados no Google Maps</p>
-                <div className="flex items-center justify-center gap-1.5 text-yellow-500 text-sm">
-                  <span className="text-white/60 font-bold text-sm uppercase tracking-widest mr-1">{stats.averageRating.toFixed(1)} / 5.0</span>
-                  <div className="flex items-center gap-0.5">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                  </div>
-                  <span className="text-white/40 text-[10px] font-bold uppercase tracking-wider ml-1">({stats.totalReviews} avaliações)</span>
-                </div>
-              </div>
-            </AnimateIn>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {reviews.map((rev, i) => {
-                // Anonimização do nome: ex. "Filipe Santos" -> "Filipe S."
-                const nameParts = rev.client_name.trim().split(' ');
-                const formattedName = nameParts.length > 1 
-                  ? `${nameParts[0]} ${nameParts[nameParts.length - 1][0]}.` 
-                  : rev.client_name;
-
-                return (
-                  <AnimateIn key={rev.id} delay={0.1 * i}>
-                    <div className="card-3d card-glow-border group bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] hover:border-green-500/20 p-6 md:p-8 rounded-[24px] flex flex-col justify-between h-full relative overflow-hidden transition-all duration-300">
-                      <div>
-                        {/* Header do card: Tag de Serviço & Estrelas */}
-                        <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
-                          <span className="bg-white/5 border border-white/5 text-[9px] font-black uppercase px-2.5 py-1 rounded-md tracking-wider text-white/70">
-                            {rev.service_type}
-                          </span>
-                          <div className="flex items-center gap-0.5 text-yellow-500 shrink-0">
-                            {Array.from({ length: rev.rating }).map((_, idx) => (
-                              <Star key={idx} className="w-3.5 h-3.5 fill-current" />
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Comentário */}
-                        <p className="text-sm text-white/70 leading-relaxed italic mb-6">
-                          "{rev.comment}"
-                        </p>
-                      </div>
-
-                      {/* Footer do card: Info do cliente anonimizada */}
-                      <div className="flex items-center justify-between border-t border-white/5 pt-4 mt-auto">
-                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center text-xs font-bold text-green-400 border border-green-500/10 uppercase">
-                            {rev.client_name[0]}
-                          </div>
-                          <div>
-                            <p className="text-xs font-bold text-white">{formattedName}</p>
-                            <p className="text-[9px] font-medium text-white/30 uppercase tracking-wider">{rev.neighborhood}</p>
-                          </div>
-                        </div>
-                        <span className="text-[9px] font-bold text-white/20 uppercase tracking-widest">
-                          Google Maps
-                        </span>
-                      </div>
-                    </div>
-                  </AnimateIn>
-                );
-              })}
-            </div>
-
-            {/* CTA para avaliar */}
-            <AnimateIn delay={0.4}>
-              <div className="text-center mt-12">
-                <a
-                  href="https://g.page/r/CSEBt1JqKDjlEBM/review"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/10 hover:border-green-500/30 bg-white/[0.02] hover:bg-green-500/5 text-xs font-black uppercase tracking-widest text-white/50 hover:text-white transition-all duration-300 transform hover:scale-102"
-                >
-                  <Star className="w-4 h-4 text-yellow-500 animate-pulse" />
-                  <span>Escrever uma Avaliação</span>
-                </a>
-              </div>
-            </AnimateIn>
           </div>
         </section>
 
