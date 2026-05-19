@@ -319,7 +319,6 @@ export default function Home() {
         </section>
 
         {/* Glow Line Separator */}
-        <GlowLine />      {/* Glow Line Separator */}
         <GlowLine />
 
         {/* CARDS DE CONTATO — Glass (Estilo LP-Base) */}
