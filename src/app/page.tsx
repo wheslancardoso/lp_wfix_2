@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { AnimateIn } from '@/components/ui/animate-in'
 import Image from 'next/image'
 import { ImageModal } from '@/components/ui/image-modal'
-import { FloatingOrbs, GridBackground, GlowLine, MouseGlow, ParticleField } from '@/components/ui/visual-effects'
+import { GlowLine, GlobalVisualEffects } from '@/components/ui/visual-effects'
 
 import { getTenantData } from '@/lib/get-tenant-data'
 import { getReviewsStats } from '@/lib/reviews'
@@ -29,10 +29,7 @@ export default async function Home() {
     <div className="dark flex min-h-screen flex-col bg-black text-white noise-overlay">
 
       {/* === EFEITOS VISUAIS GLOBAIS === */}
-      <FloatingOrbs />
-      <GridBackground />
-      <MouseGlow />
-      <ParticleField />
+      <GlobalVisualEffects />
       {/* HEADER MINIMALISTA */}
       <header className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">

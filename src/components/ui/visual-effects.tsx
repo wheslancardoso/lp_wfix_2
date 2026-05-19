@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
 
 // Hook para detectar se é mobile (tela < 768px)
 function useIsMobile() {
@@ -181,3 +182,21 @@ export function ParticleField() {
         </div>
     )
 }
+
+// Wrapper para desabilitar o SSR (Server-Side Rendering) de efeitos que dependem exclusivamente de APIs do browser
+const DynamicFloatingOrbs = dynamic(() => Promise.resolve(FloatingOrbs), { ssr: false })
+const DynamicGridBackground = dynamic(() => Promise.resolve(GridBackground), { ssr: false })
+const DynamicMouseGlow = dynamic(() => Promise.resolve(MouseGlow), { ssr: false })
+const DynamicParticleField = dynamic(() => Promise.resolve(ParticleField), { ssr: false })
+
+export function GlobalVisualEffects() {
+    return (
+        <>
+            <DynamicFloatingOrbs />
+            <DynamicGridBackground />
+            <DynamicMouseGlow />
+            <DynamicParticleField />
+        </>
+    )
+}
+
