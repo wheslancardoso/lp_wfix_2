@@ -76,8 +76,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {/* Imagens de fundo alternadas (Fundo animado gerado por IA) */}
           <div className="absolute inset-0 bg-black">
             <Image
-              src="/hero/hero-01.png"
-              alt="Ambiente profissional WFIX"
+              src="/hero/hero-01.webp"
+              alt="Design e inovação em ambiente tecnológico"
               fill
               quality={100}
               className="object-cover object-[center_35%] md:object-[center_40%] brightness-[0.5] contrast-[1.1] md:blur-[2px] animate-hero-bg-1 opacity-0 absolute"
@@ -89,8 +89,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               }}
             />
             <Image
-              src="/hero/hero-02.png"
-              alt="Espaço de trabalho premium"
+              src="/hero/hero-02.webp"
+              alt="Espaço corporativo moderno"
               fill
               quality={100}
               className="object-cover object-center md:object-[center_30%] brightness-[0.5] contrast-[1.1] md:blur-[2px] animate-hero-bg-2 opacity-0 absolute"
@@ -101,8 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               }}
             />
             <Image
-              src="/hero/hero-03.png"
-              alt="Estrutura de alta performance"
+              src="/hero/hero-03.webp"
+              alt="Estrutura moderna e de alta qualidade"
               fill
               quality={100}
               className="object-cover object-[center_20%] md:object-[center_40%] brightness-[0.4] contrast-[1.1] md:blur-[2px] animate-hero-bg-3 opacity-0 absolute"
@@ -162,13 +162,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <AnimateIn delay={0.1}>
                 <ImageModal 
                   src="/services/infografico-processo.webp" 
-                  alt="Processo de Atendimento"
+                  alt="Fluxo de trabalho e qualidade"
                   className="rounded-[30px]"
                 >
                   <div className="group relative aspect-video rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
                     <Image 
                       src="/services/infografico-processo.webp" 
-                      alt="Processo de Atendimento" 
+                      alt="Fluxo de trabalho e qualidade" 
                       fill 
                       className="object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
                     />
@@ -182,13 +182,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <AnimateIn delay={0.2}>
                 <ImageModal 
                   src="/services/resumo-servicos.webp" 
-                  alt="Resumo de Serviços"
+                  alt="Soluções corporativas e diferenciais"
                   className="rounded-[30px]"
                 >
                   <div className="group relative aspect-video rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
                     <Image 
                       src="/services/resumo-servicos.webp" 
-                      alt="Resumo de Serviços" 
+                      alt="Soluções corporativas e diferenciais" 
                       fill 
                       className="object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
                     />
@@ -310,12 +310,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {[
-                { src: '/hero/high-performance-hardware.png', alt: 'Tecnologia de Alta Performance' },
-                { src: '/hero/precision-notebook-hardware.png', alt: 'Manutenção e Upgrades Físicos de Notebooks' },
-                { src: '/hero/gallery-03.png', alt: 'Componentes de Alta Tecnologia' },
-                { src: '/services/performance-workstation.png', alt: 'Estação de Trabalho de Alta Performance' },
-                { src: '/services/technology-infrastructure.png', alt: 'Infraestrutura Tecnológica' },
-                { src: '/hero/high-performance-configuration.png', alt: 'Configuração de Alto Desempenho' },
+                { src: '/hero/high-performance-hardware.webp', alt: 'Equipamento moderno e inovador' },
+                { src: '/hero/precision-notebook-hardware.webp', alt: 'Hardware moderno de alta precisão' },
+                { src: '/hero/gallery-03.webp', alt: 'Inovação e engenharia moderna' },
+                { src: '/services/performance-workstation.webp', alt: 'Tecnologia para alta produtividade' },
+                { src: '/services/technology-infrastructure.webp', alt: 'Infraestrutura de ponta e tecnologia' },
+                { src: '/hero/high-performance-configuration.webp', alt: 'Configuração robusta e moderna' },
               ].map((img, i) => (
                 <AnimateIn key={i} delay={0.1 * i}>
                   <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-white/25 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.5)] card-3d">
