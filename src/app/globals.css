@@ -666,11 +666,11 @@ body {
 
 @keyframes glow-sweep {
   0% {
-    left: -33%;
+    transform: translateX(-100%);
   }
 
   100% {
-    left: 133%;
+    transform: translateX(300%);
   }
 }
 
@@ -751,6 +751,22 @@ body {
   50% {
     opacity: 0;
     transform: scale(1.05);
+  }
+}
+
+@keyframes hero-bg-fade-mobile {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  40% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
   }
 }
 
@@ -906,8 +922,8 @@ body {
     transform: none !important;
   }
 
-  /* Desativa shimmer borders animadas */
-  .shimmer-border::before {
+  /* Desativa shimmer borders animadas (corrigido para ::after) */
+  .shimmer-border::after {
     animation: none !important;
   }
 
@@ -921,6 +937,26 @@ body {
   .animate-glow-green {
     animation: none !important;
     box-shadow: 0 0 20px rgba(34, 197, 94, 0.3) !important;
+  }
+
+  /* Simplifica slideshow de background do hero para animação de opacidade apenas (economiza GPU/bateria) */
+  .animate-hero-bg-1 {
+    animation: hero-bg-fade-mobile 15s infinite 0s !important;
+  }
+
+  .animate-hero-bg-2 {
+    animation: hero-bg-fade-mobile 15s infinite 5s !important;
+  }
+
+  .animate-hero-bg-3 {
+    animation: hero-bg-fade-mobile 15s infinite 10s !important;
+  }
+
+  /* Desativa varredura das linhas divisorias no mobile */
+  .glow-sweep-line {
+    animation: none !important;
+    left: 25% !important;
+    transform: none !important;
   }
 }
 

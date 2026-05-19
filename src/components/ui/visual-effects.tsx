@@ -20,12 +20,12 @@ function useIsMobile() {
 export function FloatingOrbs() {
     const isMobile = useIsMobile()
 
-    // No mobile: renderiza apenas 1 orbe menor e com menos blur
+    // No mobile: renderiza apenas 1 orbe menor e com menos blur (blur reduzido para performance)
     if (isMobile) {
         return (
             <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
                 <div
-                    className="absolute w-[250px] h-[250px] rounded-full blur-[60px] opacity-[0.05]"
+                    className="absolute w-[250px] h-[250px] rounded-full blur-[10px] opacity-[0.05]"
                     style={{
                         background: 'radial-gradient(circle, hsl(150 100% 50%), transparent 70%)',
                         top: '30%',
@@ -108,11 +108,12 @@ export function GlowLine() {
         <div className="relative w-full h-[1px] my-6 md:my-8 overflow-hidden">
             <div className="absolute inset-0 bg-white/5" />
             <div
-                className="absolute h-full w-1/2 sm:w-1/3"
+                className="absolute h-full w-1/2 sm:w-1/3 glow-sweep-line"
                 style={{
                     background: 'linear-gradient(90deg, transparent, hsl(142 72% 50% / 0.8), transparent)',
                     animation: 'glow-sweep 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite',
-                    willChange: 'left',
+                    willChange: 'transform',
+                    left: 0,
                 }}
             />
         </div>

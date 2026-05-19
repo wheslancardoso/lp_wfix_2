@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 import { ZoomIn } from "lucide-react"
@@ -16,6 +16,21 @@ interface ImageModalProps {
 
 export function ImageModal({ src, alt, label, children, className }: ImageModalProps) {
     const [isOpen, setIsOpen] = useState(false)
+
+    useEffect(() => {
+        if (!isOpen) {
+            // Garante liberação de rolagem e interações quando o modal fechar
+            const cleanup = () => {
+                document.body.style.pointerEvents = "";
+                document.body.style.overflow = "";
+                document.documentElement.style.pointerEvents = "";
+                document.documentElement.style.overflow = "";
+            };
+            cleanup();
+            const timer = setTimeout(cleanup, 100);
+            return () => clearTimeout(timer);
+        }
+    }, [isOpen]);
 
     return (
         <>
