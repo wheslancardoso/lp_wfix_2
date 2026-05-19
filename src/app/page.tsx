@@ -272,6 +272,49 @@ export default function Home() {
                 </div>
               </AnimateIn>
             </div>
+
+            {/* Info Cards Compactos */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-10 md:mt-12 text-left">
+              <AnimateIn delay={0.1}>
+                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-white/15 p-4 rounded-2xl flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5">
+                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-primary/10 flex items-center justify-center shrink-0 transition-colors duration-300">
+                    <Phone className="w-4 h-4 text-white/40 group-hover:text-primary transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Ligar Agora</p>
+                    <p className="text-[10px] font-bold text-white">{formattedPhone}</p>
+                  </div>
+                </div>
+              </AnimateIn>
+
+              <AnimateIn delay={0.2}>
+                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-white/15 p-4 rounded-2xl flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5">
+                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-blue-500/10 flex items-center justify-center shrink-0 transition-colors duration-300">
+                    <Clock className="w-4 h-4 text-white/40 group-hover:text-blue-400 transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Horário</p>
+                    <div className="text-[9px] font-bold text-white leading-tight mt-0.5">
+                      <p>Seg-Sex: a partir das 17h</p>
+                      <p>Sáb: 09h às 14h</p>
+                    </div>
+                  </div>
+                </div>
+              </AnimateIn>
+
+              <AnimateIn delay={0.3}>
+                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-white/15 p-4 rounded-2xl flex items-center gap-4 sm:col-span-1 transition-all duration-300 hover:-translate-y-0.5">
+                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-red-500/10 flex items-center justify-center shrink-0 transition-colors duration-300">
+                    <MapPin className="w-4 h-4 text-white/40 group-hover:text-red-400 transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Localização</p>
+                    <p className="text-[10px] font-bold text-white">Goiânia - GO</p>
+                  </div>
+                </div>
+              </AnimateIn>
+            </div>
+
           </div>
         </section>
 
@@ -320,48 +363,6 @@ export default function Home() {
                 </a>
               </AnimateIn>
 
-            </div>
-
-            {/* Info Cards Compactos */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
-              <AnimateIn delay={0.3}>
-                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-white/15 p-4 rounded-2xl flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5">
-                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-primary/10 flex items-center justify-center shrink-0 transition-colors duration-300">
-                    <Phone className="w-4 h-4 text-white/40 group-hover:text-primary transition-colors duration-300" />
-                  </div>
-                  <div>
-                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Ligar Agora</p>
-                    <p className="text-[10px] font-bold text-white">{formattedPhone}</p>
-                  </div>
-                </div>
-              </AnimateIn>
-
-              <AnimateIn delay={0.4}>
-                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-white/15 p-4 rounded-2xl flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5">
-                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-blue-500/10 flex items-center justify-center shrink-0 transition-colors duration-300">
-                    <Clock className="w-4 h-4 text-white/40 group-hover:text-blue-400 transition-colors duration-300" />
-                  </div>
-                  <div>
-                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Horário</p>
-                    <div className="text-[9px] font-bold text-white leading-tight mt-0.5">
-                      <p>Seg-Sex: a partir das 17h</p>
-                      <p>Sáb: 09h às 14h</p>
-                    </div>
-                  </div>
-                </div>
-              </AnimateIn>
-
-              <AnimateIn delay={0.5}>
-                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-white/15 p-4 rounded-2xl flex items-center gap-4 sm:col-span-1 transition-all duration-300 hover:-translate-y-0.5">
-                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-red-500/10 flex items-center justify-center shrink-0 transition-colors duration-300">
-                    <MapPin className="w-4 h-4 text-white/40 group-hover:text-red-400 transition-colors duration-300" />
-                  </div>
-                  <div>
-                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Localização</p>
-                    <p className="text-[10px] font-bold text-white">Goiânia - GO</p>
-                  </div>
-                </div>
-              </AnimateIn>
             </div>
           </div>
         </section>
