@@ -48,7 +48,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased overflow-x-hidden`}
         style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}
       >
         {/* Google Tag Manager (noscript) */}

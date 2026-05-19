@@ -25,7 +25,7 @@ export default async function Home() {
   const stats = await getReviewsStats()
 
   return (
-    <div className="dark flex min-h-screen flex-col bg-black text-white noise-overlay">
+    <div className="dark flex min-h-screen flex-col bg-black text-white noise-overlay overflow-x-hidden w-full max-w-full">
 
       {/* === EFEITOS VISUAIS GLOBAIS === */}
       <GlobalVisualEffects />
