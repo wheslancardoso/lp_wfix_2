@@ -123,16 +123,21 @@ export default function Home() {
             </AnimateIn>
 
             <AnimateIn delay={0.5}>
-              <div className="flex items-center justify-center gap-2 mt-4 text-white/50 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] pointer-events-none">
-                <div className="flex items-center gap-0.5 text-yellow-500">
+              <a
+                href="https://g.page/r/CSEBt1JqKDjlEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 mt-4 text-white/40 hover:text-white/70 text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] transition-colors duration-300"
+              >
+                <div className="flex items-center gap-0.5 text-yellow-500 animate-pulse">
                   <Star className="w-3 h-3 fill-current" />
                   <Star className="w-3 h-3 fill-current" />
                   <Star className="w-3 h-3 fill-current" />
                   <Star className="w-3 h-3 fill-current" />
                   <Star className="w-3 h-3 fill-current" />
                 </div>
-                <span>4.9/5 • +350 avaliações no google maps</span>
-              </div>
+                <span>5.0/5.0 • Excelente no Google Maps</span>
+              </a>
             </AnimateIn>
 
           </div>
