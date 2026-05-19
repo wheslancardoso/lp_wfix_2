@@ -5,6 +5,7 @@ import { AnimateIn } from '@/components/ui/animate-in'
 import Image from 'next/image'
 import { ImageModal } from '@/components/ui/image-modal'
 import { GlowLine, GlobalVisualEffects } from '@/components/ui/visual-effects'
+import { WhatsAppLink, WhatsAppAnchor } from '@/components/ui/whatsapp-link'
 
 import { getTenantData } from '@/lib/get-tenant-data'
 import { getReviewsStats } from '@/lib/reviews'
@@ -22,8 +23,6 @@ export function generateMetadata() {
 export default async function Home() {
   const { whatsappNumber, formattedPhone, brandName } = getTenantData()
   const stats = await getReviewsStats()
-
-  const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20o%20especialista.`
 
   return (
     <div className="dark flex min-h-screen flex-col bg-black text-white noise-overlay">
@@ -115,10 +114,10 @@ export default async function Home() {
 
             <AnimateIn delay={0.4}>
               <Button size="lg" id="cta-whatsapp-hero" className="h-14 px-10 text-base font-black uppercase tracking-widest rounded-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 transform hover:scale-105 animate-glow-green mb-2 md:mb-4" asChild>
-                <Link href={whatsappLink} target="_blank">
+                <WhatsAppLink phone={whatsappNumber} target="_blank">
                   <MessageCircle className="mr-2 h-5 w-5 pointer-events-none" />
                   <span className="pointer-events-none">Iniciar Conversa</span>
-                </Link>
+                </WhatsAppLink>
               </Button>
             </AnimateIn>
 
@@ -353,8 +352,8 @@ export default async function Home() {
 
               {/* WhatsApp Card */}
               <AnimateIn delay={0.1}>
-                <Link
-                  href={whatsappLink}
+                <WhatsAppLink
+                  phone={whatsappNumber}
                   target="_blank"
                   id="cta-whatsapp-card"
                   className="card-3d card-glow-border group bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-green-500/30 p-8 rounded-[30px] flex flex-col items-center text-center"
@@ -367,7 +366,7 @@ export default async function Home() {
                   <span className="bg-white/5 text-[9px] font-black px-6 py-2 rounded-full uppercase tracking-widest group-hover:bg-green-500 group-hover:text-black transition-colors pointer-events-none text-white">
                     Iniciar Conversa
                   </span>
-                </Link>
+                </WhatsAppLink>
               </AnimateIn>
 
               {/* Instagram Card */}
@@ -393,8 +392,8 @@ export default async function Home() {
         </section>
 
         {/* BOTÃO FLUTUANTE WHATSAPP */}
-        <a
-          href={whatsappLink}
+        <WhatsAppAnchor
+          phone={whatsappNumber}
           target="_blank"
           rel="noopener noreferrer"
           id="cta-whatsapp-flutuante"
@@ -410,7 +409,7 @@ export default async function Home() {
           <div className="absolute inset-0 rounded-full animate-ping bg-green-500/30 pointer-events-none" />
 
           <MessageCircle className="w-6 h-6 text-white pointer-events-none" />
-        </a>
+        </WhatsAppAnchor>
       </main>
 
       {/* FOOTER MÍNIMO */}
@@ -419,9 +418,9 @@ export default async function Home() {
           {brandName} • Goiânia - GO • {new Date().getFullYear()}
         </p>
         <div className="mt-5 flex items-center justify-center gap-5">
-          <a href={whatsappLink} target="_blank" className="w-8 h-8 rounded-full bg-white/5 hover:bg-green-500/20 flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="WhatsApp">
+          <WhatsAppAnchor phone={whatsappNumber} target="_blank" className="w-8 h-8 rounded-full bg-white/5 hover:bg-green-500/20 flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="WhatsApp">
             <MessageCircle className="w-4 h-4 text-white/30 hover:text-green-400 transition-colors duration-300" />
-          </a>
+          </WhatsAppAnchor>
           <a href="https://instagram.com/wfixtech" target="_blank" className="w-8 h-8 rounded-full bg-white/5 hover:bg-pink-500/20 flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Instagram">
             <Instagram className="w-4 h-4 text-white/30 hover:text-pink-400 transition-colors duration-300" />
           </a>
