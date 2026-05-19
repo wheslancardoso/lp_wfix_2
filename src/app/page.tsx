@@ -128,51 +128,52 @@ export default function Home() {
         {/* Glow Line Separator */}
         <GlowLine />
 
-        {/* DIFERENCIAIS — Cards Glass com Ícones */}
-        <section className="py-16 md:py-24 relative">
-          {/* Background glow */}
-          <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-green-500/5 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
-          <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <AnimateIn>
-              <h2 className="text-3xl md:text-5xl font-black uppercase mb-2 tracking-tighter">Nossos Diferenciais</h2>
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] mb-12 md:mb-16 font-bold text-white/30 italic">Estrutura, qualidade e atendimento</p>
-            </AnimateIn>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        {/* SEÇÃO VISUAL — Infográficos de Processo e Serviços (Full-Bleed Otimizado) */}
+        <section className="py-2 md:py-8 relative overflow-hidden">
+          <div className="max-w-[1600px] mx-auto px-0 sm:px-4 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+              
+              {/* Card Como Funciona */}
               <AnimateIn delay={0.1}>
-                <div className="card-3d card-glow-border group bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] p-8 md:p-10 rounded-3xl relative overflow-hidden">
-                  <span className="absolute -top-2 -right-2 text-white/[0.03] text-7xl font-black italic">01</span>
-                  <div className="animate-float-subtle">
-                    <MapPin className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
+                <ImageModal 
+                  src="/services/infografico-processo.webp" 
+                  alt="Fluxo de trabalho e qualidade"
+                  className="rounded-none sm:rounded-[30px]"
+                >
+                  <div className="group relative aspect-video rounded-none sm:rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border-y border-x-0 sm:border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
+                    <Image 
+                      src="/services/infografico-processo.webp" 
+                      alt="Fluxo de trabalho e qualidade" 
+                      fill 
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover sm:object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
+                    />
+                    {/* Overlay sutil para manter o estilo glass */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Presença Local</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Atuação em Goiânia e região, com estrutura física para facilitar o contato.</p>
-                </div>
+                </ImageModal>
               </AnimateIn>
 
+              {/* Card Resumo de Serviços */}
               <AnimateIn delay={0.2}>
-                <div className="card-3d card-glow-border group bg-white/[0.03] backdrop-blur-xl border border-primary/20 p-8 md:p-10 rounded-3xl relative overflow-hidden">
-                  <span className="absolute -top-2 -right-2 text-white/[0.03] text-7xl font-black italic">02</span>
-                  <div className="animate-float-subtle" style={{ animationDelay: '2s' }}>
-                    <ShieldCheck className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
+                <ImageModal 
+                  src="/services/resumo-servicos.webp" 
+                  alt="Soluções corporativas e diferenciais"
+                  className="rounded-none sm:rounded-[30px]"
+                >
+                  <div className="group relative aspect-video rounded-none sm:rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border-y border-x-0 sm:border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
+                    <Image 
+                      src="/services/resumo-servicos.webp" 
+                      alt="Soluções corporativas e diferenciais" 
+                      fill 
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover sm:object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Garantia de 180 dias</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Confiança total no que fazemos. Todos os trabalhos com garantia estendida.</p>
-                </div>
+                </ImageModal>
               </AnimateIn>
 
-              <AnimateIn delay={0.3}>
-                <div className="card-3d card-glow-border group bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] p-8 md:p-10 rounded-3xl relative overflow-hidden">
-                  <span className="absolute -top-2 -right-2 text-white/[0.03] text-7xl font-black italic">03</span>
-                  <div className="animate-float-subtle" style={{ animationDelay: '4s' }}>
-                    <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Atendimento Rápido</h3>
-                  <p className="text-sm text-white/60 leading-relaxed italic">Canal direto pelo WhatsApp. Resposta e orçamento sem enrolação.</p>
-                </div>
-              </AnimateIn>
             </div>
           </div>
         </section>
@@ -225,52 +226,51 @@ export default function Home() {
         {/* Glow Line Separator */}
         <GlowLine />
 
-        {/* SEÇÃO VISUAL — Infográficos de Processo e Serviços */}
-        <section className="py-2 md:py-8 relative overflow-hidden">
-          <div className="max-w-[1600px] mx-auto px-2 sm:px-4 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-              
-              {/* Card Como Funciona */}
+        {/* DIFERENCIAIS — Cards Glass com Ícones */}
+        <section className="py-16 md:py-24 relative">
+          {/* Background glow */}
+          <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-green-500/5 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
+
+          <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <AnimateIn>
+              <h2 className="text-3xl md:text-5xl font-black uppercase mb-2 tracking-tighter">Nossos Diferenciais</h2>
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] mb-12 md:mb-16 font-bold text-white/30 italic">Estrutura, qualidade e atendimento</p>
+            </AnimateIn>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <AnimateIn delay={0.1}>
-                <ImageModal 
-                  src="/services/infografico-processo.webp" 
-                  alt="Fluxo de trabalho e qualidade"
-                  className="rounded-[30px]"
-                >
-                  <div className="group relative aspect-video rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
-                    <Image 
-                      src="/services/infografico-processo.webp" 
-                      alt="Fluxo de trabalho e qualidade" 
-                      fill 
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
-                    />
-                    {/* Overlay sutil para manter o estilo glass */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                <div className="card-3d card-glow-border group bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] p-8 md:p-10 rounded-3xl relative overflow-hidden">
+                  <span className="absolute -top-2 -right-2 text-white/[0.03] text-7xl font-black italic">01</span>
+                  <div className="animate-float-subtle">
+                    <MapPin className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
-                </ImageModal>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Presença Local</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">Atuação em Goiânia e região, com estrutura física para facilitar o contato.</p>
+                </div>
               </AnimateIn>
 
-              {/* Card Resumo de Serviços */}
               <AnimateIn delay={0.2}>
-                <ImageModal 
-                  src="/services/resumo-servicos.webp" 
-                  alt="Soluções corporativas e diferenciais"
-                  className="rounded-[30px]"
-                >
-                  <div className="group relative aspect-video rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
-                    <Image 
-                      src="/services/resumo-servicos.webp" 
-                      alt="Soluções corporativas e diferenciais" 
-                      fill 
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                <div className="card-3d card-glow-border group bg-white/[0.03] backdrop-blur-xl border border-primary/20 p-8 md:p-10 rounded-3xl relative overflow-hidden">
+                  <span className="absolute -top-2 -right-2 text-white/[0.03] text-7xl font-black italic">02</span>
+                  <div className="animate-float-subtle" style={{ animationDelay: '2s' }}>
+                    <ShieldCheck className="w-12 h-12 md:w-14 md:h-14 mb-6 text-primary mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
-                </ImageModal>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Garantia de 180 dias</h3>
+                  <p className="text-sm text-white/60 leading-relaxed">Confiança total no que fazemos. Todos os trabalhos com garantia estendida.</p>
+                </div>
               </AnimateIn>
 
+              <AnimateIn delay={0.3}>
+                <div className="card-3d card-glow-border group bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] p-8 md:p-10 rounded-3xl relative overflow-hidden">
+                  <span className="absolute -top-2 -right-2 text-white/[0.03] text-7xl font-black italic">03</span>
+                  <div className="animate-float-subtle" style={{ animationDelay: '4s' }}>
+                    <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
+                  </div>
+                  <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Atendimento Rápido</h3>
+                  <p className="text-sm text-white/60 leading-relaxed italic">Canal direto pelo WhatsApp. Resposta e orçamento sem enrolação.</p>
+                </div>
+              </AnimateIn>
             </div>
           </div>
         </section>
@@ -365,7 +365,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 
         {/* BOTÃO FLUTUANTE WHATSAPP */}
         <a
