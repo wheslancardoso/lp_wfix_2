@@ -95,7 +95,7 @@ export default async function Home() {
           <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
             <AnimateIn delay={0.1}>
               <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.5em] text-white/50 mb-3">
-                Sua Referência em Goiânia
+                Performance e Soluções de Alta Complexidade
               </p>
             </AnimateIn>
 
@@ -144,6 +144,9 @@ export default async function Home() {
                   </svg>
                 </span>
               </a>
+              <p className="text-[10px] text-white/30 italic mt-3 max-w-sm mx-auto tracking-wide">
+                "Resolução no mesmo dia e transparência total do início ao fim. Profissionalismo raro no mercado."
+              </p>
             </AnimateIn>
 
           </div>
@@ -194,7 +197,7 @@ export default async function Home() {
                     <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
                   <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Análise Precisa</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Clareza absoluta. A definição do escopo e etapas ocorre somente após a análise presencial.</p>
+                  <p className="text-sm text-white/60 leading-relaxed">Clareza absoluta e sigilo corporativo. Seus ativos e informações sob rígidos protocolos de segurança.</p>
                 </div>
               </AnimateIn>
             </div>
