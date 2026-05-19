@@ -138,9 +138,9 @@ export default async function Home() {
                 <span className="flex items-center gap-1.5">
                   {stats.averageRating.toFixed(1)}/5.0 • Ver {stats.totalReviews} avaliações no Google Maps
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-2.5 h-2.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300">
-                    <path d="M15 3h6v6"/>
-                    <path d="M10 14 21 3"/>
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <path d="M15 3h6v6" />
+                    <path d="M10 14 21 3" />
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   </svg>
                 </span>
               </a>
@@ -197,7 +197,7 @@ export default async function Home() {
                     <Star className="w-12 h-12 md:w-14 md:h-14 mb-6 text-green-500 mx-auto group-hover:scale-110 transition-transform duration-300 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]" />
                   </div>
                   <h3 className="text-lg md:text-xl font-black mb-3 uppercase">Análise Precisa</h3>
-                  <p className="text-sm text-white/60 leading-relaxed">Clareza absoluta e sigilo corporativo. Seus ativos e informações sob rígidos protocolos de segurança.</p>
+                  <p className="text-sm text-white/60 leading-relaxed">Clareza absoluta. A definição do escopo e etapas ocorre somente após a análise presencial.</p>
                 </div>
               </AnimateIn>
             </div>
@@ -299,19 +299,19 @@ export default async function Home() {
         <section className="py-10 md:py-16 relative overflow-hidden">
           <div className="max-w-[1600px] mx-auto px-0 sm:px-4 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-              
+
               {/* Card Como Funciona */}
               <AnimateIn delay={0.1}>
-                <ImageModal 
-                  src="/services/infografico-processo.webp" 
+                <ImageModal
+                  src="/services/infografico-processo.webp"
                   alt="Fluxo de trabalho e qualidade"
                   className="rounded-none sm:rounded-[30px]"
                 >
                   <div className="group relative aspect-video rounded-none sm:rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border-y border-x-0 sm:border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
-                    <Image 
-                      src="/services/infografico-processo.webp" 
-                      alt="Fluxo de trabalho e qualidade" 
-                      fill 
+                    <Image
+                      src="/services/infografico-processo.webp"
+                      alt="Fluxo de trabalho e qualidade"
+                      fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover sm:object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
                     />
@@ -323,16 +323,16 @@ export default async function Home() {
 
               {/* Card Resumo de Serviços */}
               <AnimateIn delay={0.2}>
-                <ImageModal 
-                  src="/services/resumo-servicos.webp" 
+                <ImageModal
+                  src="/services/resumo-servicos.webp"
                   alt="Soluções corporativas e diferenciais"
                   className="rounded-none sm:rounded-[30px]"
                 >
                   <div className="group relative aspect-video rounded-none sm:rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border-y border-x-0 sm:border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
-                    <Image 
-                      src="/services/resumo-servicos.webp" 
-                      alt="Soluções corporativas e diferenciais" 
-                      fill 
+                    <Image
+                      src="/services/resumo-servicos.webp"
+                      alt="Soluções corporativas e diferenciais"
+                      fill
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover sm:object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
                     />
