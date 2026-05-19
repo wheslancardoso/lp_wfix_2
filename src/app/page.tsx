@@ -3,7 +3,6 @@ import { Instagram, MessageCircle, MapPin, Clock, ShieldCheck, Star, Phone } fro
 import { Button } from '@/components/ui/button'
 import { AnimateIn } from '@/components/ui/animate-in'
 import Image from 'next/image'
-import Script from 'next/script'
 import { ImageModal } from '@/components/ui/image-modal'
 import { FloatingOrbs, GridBackground, GlowLine, MouseGlow, ParticleField } from '@/components/ui/visual-effects'
 
@@ -30,30 +29,6 @@ export default function Home() {
       <GridBackground />
       <MouseGlow />
       <ParticleField />
-
-      {/* Google Tag Manager */}
-      <Script
-        id="gtm-script"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FG7HKVH');`
-        }}
-      />
-
-      {/* Google Tag Manager (noscript) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-5FG7HKVH"
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
-
       {/* HEADER MINIMALISTA */}
       <header className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
