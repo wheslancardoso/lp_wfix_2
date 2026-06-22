@@ -47,7 +47,7 @@ export default async function Home() {
       <main className="flex-1 pt-16 relative z-[2]">
 
         {/* HERO — Centralizada e Compacta */}
-        <section className="relative min-h-[45vh] md:min-h-[50vh] flex flex-col items-center justify-center pt-20 pb-2 md:pb-4 overflow-hidden">
+        <section className="relative min-h-[45vh] md:min-h-[50vh] flex flex-col items-center justify-center pt-20 pb-20 md:pb-32 overflow-hidden">
           {/* Imagens de fundo alternadas (Fundo animado gerado por IA) */}
           <div className="absolute inset-0 bg-black">
             <Image
@@ -152,6 +152,117 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* SEÇÃO VISUAL — Infográficos de Processo e Serviços (Full-Bleed Otimizado) */}
+        <section className="pb-16 md:pb-24 pt-0 relative z-20 -mt-12 md:-mt-24">
+          {/* Decorative Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-green-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-[1000px] mx-auto px-4 relative z-10">
+            <AnimateIn>
+              <div className="text-center mb-10 md:mb-16">
+                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-2 drop-shadow-md">Metodologia Exclusiva</h2>
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold text-white/40 italic">Transparência do diagnóstico à entrega</p>
+              </div>
+            </AnimateIn>
+
+            <div className="grid grid-cols-1 gap-12 md:gap-20">
+
+              {/* Card Como Funciona */}
+              <AnimateIn delay={0.1}>
+                <ImageModal
+                  src="/services/infografico-processo.webp"
+                  alt="Fluxo de trabalho e qualidade"
+                  className="rounded-3xl sm:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                >
+                  <div className="group relative w-full h-[400px] md:h-[700px] rounded-3xl sm:rounded-[40px] overflow-hidden bg-black/60 backdrop-blur-2xl border-2 border-white/10 hover:border-green-500/50 hover:shadow-[0_0_60px_rgba(34,197,94,0.3)] transition-all duration-700 card-3d flex items-center justify-center">
+                    <Image
+                      src="/services/infografico-processo.webp"
+                      alt="Fluxo de trabalho e qualidade"
+                      fill
+                      sizes="100vw"
+                      className="object-contain p-4 md:p-8 group-hover:scale-[1.02] transition-transform duration-700"
+                    />
+                    {/* Overlay sutil para manter o estilo glass */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                  </div>
+                </ImageModal>
+                <div className="mt-6 text-center md:hidden">
+                  <p className="text-[10px] text-white/60 font-black uppercase tracking-widest bg-white/10 inline-block px-5 py-2 rounded-full backdrop-blur-sm border border-white/5 shadow-lg">Toque para ampliar imagem</p>
+                </div>
+              </AnimateIn>
+
+              {/* Card Resumo de Serviços */}
+              <AnimateIn delay={0.2}>
+                <ImageModal
+                  src="/services/resumo-servicos.webp"
+                  alt="Soluções corporativas e diferenciais"
+                  className="rounded-3xl sm:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                >
+                  <div className="group relative w-full h-[400px] md:h-[700px] rounded-3xl sm:rounded-[40px] overflow-hidden bg-black/60 backdrop-blur-2xl border-2 border-white/10 hover:border-green-500/50 hover:shadow-[0_0_60px_rgba(34,197,94,0.3)] transition-all duration-700 card-3d flex items-center justify-center">
+                    <Image
+                      src="/services/resumo-servicos.webp"
+                      alt="Soluções corporativas e diferenciais"
+                      fill
+                      sizes="100vw"
+                      className="object-contain p-4 md:p-8 group-hover:scale-[1.02] transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                  </div>
+                </ImageModal>
+                <div className="mt-6 text-center md:hidden">
+                  <p className="text-[10px] text-white/60 font-black uppercase tracking-widest bg-white/10 inline-block px-5 py-2 rounded-full backdrop-blur-sm border border-white/5 shadow-lg">Toque para ampliar imagem</p>
+                </div>
+              </AnimateIn>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Glow Line Separator */}
+        <GlowLine />
+
+        {/* GALERIA — Imagens que falam pelo trabalho */}
+        <section className="py-16 md:py-24 relative">
+          {/* Background glow atrás da galeria */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-5xl mx-auto px-4 relative z-10">
+            <AnimateIn>
+              <div className="text-center mb-10 md:mb-16">
+                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-2">Nosso Trabalho</h2>
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold text-white/30 italic">Padrão de excelência em cada detalhe</p>
+              </div>
+            </AnimateIn>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-6">
+              {[
+                { src: '/hero/high-performance-hardware.webp', alt: 'Tecnologia moderna e inovadora' },
+                { src: '/hero/precision-notebook-hardware.webp', alt: 'Estrutura tecnológica de alta precisão' },
+                { src: '/hero/gallery-03.webp', alt: 'Inovação e engenharia moderna' },
+                { src: '/services/performance-workstation.webp', alt: 'Tecnologia para alta produtividade' },
+                { src: '/services/technology-infrastructure.webp', alt: 'Infraestrutura de ponta e tecnologia' },
+                { src: '/hero/high-performance-configuration.webp', alt: 'Configuração robusta e moderna' },
+              ].map((img, i) => (
+                <AnimateIn key={i} delay={0.1 * i}>
+                  <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] md:shadow-none hover:border-green-500/30 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(34,197,94,0.15)] card-3d">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover transition-all duration-700 group-hover:scale-110 brightness-[0.8] group-hover:brightness-100"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                    />
+                    {/* Gradient overlay sutil no hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
+                    {/* Glow verde sutil no canto */}
+                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
+                  </div>
+                </AnimateIn>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Glow Line Separator */}
         <GlowLine />
 
@@ -244,104 +355,6 @@ export default async function Home() {
               </AnimateIn>
             </div>
 
-          </div>
-        </section>
-
-        {/* Glow Line Separator */}
-        <GlowLine />
-
-        {/* GALERIA — Imagens que falam pelo trabalho */}
-        <section className="py-10 md:py-20 relative">
-          {/* Background glow atrás da galeria */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-
-          <div className="max-w-4xl mx-auto px-4 relative z-10">
-            <AnimateIn>
-              <div className="text-center mb-10">
-                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-2">Nosso Trabalho</h2>
-                <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold text-white/30 italic">As imagens falam por nós</p>
-              </div>
-            </AnimateIn>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              {[
-                { src: '/hero/high-performance-hardware.webp', alt: 'Tecnologia moderna e inovadora' },
-                { src: '/hero/precision-notebook-hardware.webp', alt: 'Estrutura tecnológica de alta precisão' },
-                { src: '/hero/gallery-03.webp', alt: 'Inovação e engenharia moderna' },
-                { src: '/services/performance-workstation.webp', alt: 'Tecnologia para alta produtividade' },
-                { src: '/services/technology-infrastructure.webp', alt: 'Infraestrutura de ponta e tecnologia' },
-                { src: '/hero/high-performance-configuration.webp', alt: 'Configuração robusta e moderna' },
-              ].map((img, i) => (
-                <AnimateIn key={i} delay={0.1 * i}>
-                  <div className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-white/25 transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.5)] card-3d">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="object-cover transition-all duration-700 group-hover:scale-110 brightness-[0.7] group-hover:brightness-100"
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                    />
-                    {/* Gradient overlay no hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
-                    {/* Glow verde sutil no canto */}
-                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
-                  </div>
-                </AnimateIn>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Glow Line Separator */}
-        <GlowLine />
-
-        {/* SEÇÃO VISUAL — Infográficos de Processo e Serviços (Full-Bleed Otimizado) */}
-        <section className="py-10 md:py-16 relative overflow-hidden">
-          <div className="max-w-[1600px] mx-auto px-0 sm:px-4 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-
-              {/* Card Como Funciona */}
-              <AnimateIn delay={0.1}>
-                <ImageModal
-                  src="/services/infografico-processo.webp"
-                  alt="Fluxo de trabalho e qualidade"
-                  className="rounded-none sm:rounded-[30px]"
-                >
-                  <div className="group relative aspect-video rounded-none sm:rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border-y border-x-0 sm:border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
-                    <Image
-                      src="/services/infografico-processo.webp"
-                      alt="Fluxo de trabalho e qualidade"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover sm:object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
-                    />
-                    {/* Overlay sutil para manter o estilo glass */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-                  </div>
-                </ImageModal>
-              </AnimateIn>
-
-              {/* Card Resumo de Serviços */}
-              <AnimateIn delay={0.2}>
-                <ImageModal
-                  src="/services/resumo-servicos.webp"
-                  alt="Soluções corporativas e diferenciais"
-                  className="rounded-none sm:rounded-[30px]"
-                >
-                  <div className="group relative aspect-video rounded-none sm:rounded-[30px] overflow-hidden bg-white/[0.03] backdrop-blur-xl border-y border-x-0 sm:border border-white/10 hover:border-green-500/30 transition-all duration-500 card-3d flex items-center justify-center w-full">
-                    <Image
-                      src="/services/resumo-servicos.webp"
-                      alt="Soluções corporativas e diferenciais"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover sm:object-contain p-0 md:p-4 group-hover:scale-[1.05] transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-                  </div>
-                </ImageModal>
-              </AnimateIn>
-
-            </div>
           </div>
         </section>
 
