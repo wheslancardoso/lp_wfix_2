@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { ImageModal } from '@/components/ui/image-modal'
 import { GlowLine, GlobalVisualEffects } from '@/components/ui/visual-effects'
 import { WhatsAppLink, WhatsAppAnchor } from '@/components/ui/whatsapp-link'
+import { StatsCounters } from '@/components/stats-counters'
 
 import { getTenantData } from '@/lib/get-tenant-data'
 import { getReviewsStats } from '@/lib/reviews'
@@ -95,7 +96,7 @@ export default async function Home() {
           <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
             <AnimateIn delay={0.1}>
               <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.5em] text-white/50 mb-3">
-                Performance e Soluções de Alta Complexidade
+                Qualidade e Confiança para Seu Equipamento
               </p>
             </AnimateIn>
 
@@ -108,17 +109,22 @@ export default async function Home() {
 
             <AnimateIn delay={0.3}>
               <p className="text-xs md:text-sm text-white/60 uppercase tracking-[0.2em] font-bold max-w-md mx-auto mb-6">
-                Entre em contato via WhatsApp e tire todas suas dúvidas, estamos prontos para te ajudar.
+                Atendimento em Goiânia com rapidez, garantia e total transparência.
               </p>
             </AnimateIn>
 
             <AnimateIn delay={0.4}>
-              <Button size="lg" id="cta-whatsapp-hero" className="h-14 px-10 text-base font-black uppercase tracking-widest rounded-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 transform hover:scale-105 animate-glow-green mb-2 md:mb-4" asChild>
-                <WhatsAppLink phone={whatsappNumber} target="_blank">
-                  <MessageCircle className="mr-2 h-5 w-5 pointer-events-none" />
-                  <span className="pointer-events-none">Agendar Avaliação</span>
-                </WhatsAppLink>
-              </Button>
+              <div className="flex flex-col items-center mb-2 md:mb-4">
+                <Button size="lg" id="cta-whatsapp-hero" className="h-14 px-10 text-base font-black uppercase tracking-widest rounded-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 transform hover:scale-105 animate-glow-green" asChild>
+                  <WhatsAppLink phone={whatsappNumber} target="_blank">
+                    <MessageCircle className="mr-2 h-5 w-5 pointer-events-none" />
+                    <span className="pointer-events-none">Falar no WhatsApp</span>
+                  </WhatsAppLink>
+                </Button>
+                <p className="text-[10px] text-green-400 font-bold uppercase tracking-widest mt-4 animate-pulse">
+                  🟢 Atendimento hoje disponível • Resposta em 5 min
+                </p>
+              </div>
             </AnimateIn>
 
             <AnimateIn delay={0.5}>
@@ -218,11 +224,28 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Glow Line Separator */}
-        <GlowLine />
+        {/* CONTADORES — Prova Social Numérica */}
+        <StatsCounters averageRating={stats.averageRating} totalReviews={stats.totalReviews} />
+
+        {/* CTA INTERMEDIÁRIO — Captura quem já se convenceu */}
+        <section className="py-4 md:py-6">
+          <div className="max-w-md mx-auto px-4 text-center">
+            <AnimateIn>
+              <Button size="lg" id="cta-whatsapp-mid" className="w-full h-14 text-base font-black uppercase tracking-widest rounded-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300 transform hover:scale-105 animate-glow-green" asChild>
+                <WhatsAppLink phone={whatsappNumber} target="_blank">
+                  <MessageCircle className="mr-2 h-5 w-5 pointer-events-none" />
+                  <span className="pointer-events-none">Falar no WhatsApp</span>
+                </WhatsAppLink>
+              </Button>
+              <p className="text-[10px] text-green-400/70 font-bold uppercase tracking-widest mt-3">
+                Resposta em até 5 minutos
+              </p>
+            </AnimateIn>
+          </div>
+        </section>
 
         {/* GALERIA — Imagens que falam pelo trabalho */}
-        <section className="py-16 md:py-24 relative">
+        <section className="py-10 md:py-16 relative">
           {/* Background glow atrás da galeria */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -243,31 +266,30 @@ export default async function Home() {
                 { src: '/services/technology-infrastructure.webp', alt: 'Infraestrutura de ponta e tecnologia' },
                 { src: '/hero/high-performance-configuration.webp', alt: 'Configuração robusta e moderna' },
               ].map((img, i) => (
-                <AnimateIn key={i} delay={0.1 * i}>
-                  <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] md:shadow-none hover:border-green-500/30 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(34,197,94,0.15)] card-3d">
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="object-cover transition-all duration-700 group-hover:scale-110 brightness-[0.8] group-hover:brightness-100"
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                    />
-                    {/* Gradient overlay sutil no hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
-                    {/* Glow verde sutil no canto */}
-                    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
-                  </div>
-                </AnimateIn>
+                <div key={i} className={i >= 3 ? 'hidden sm:block' : ''}>
+                  <AnimateIn delay={0.1 * i}>
+                    <div className="group relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] md:shadow-none hover:border-green-500/30 transition-all duration-500 hover:shadow-[0_10px_40px_rgba(34,197,94,0.15)] card-3d">
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover transition-all duration-700 group-hover:scale-110 brightness-[0.8] group-hover:brightness-100"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                      />
+                      {/* Gradient overlay sutil no hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
+                      {/* Glow verde sutil no canto */}
+                      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none" />
+                    </div>
+                  </AnimateIn>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Glow Line Separator */}
-        <GlowLine />
-
         {/* DIFERENCIAIS — Cards Glass com Ícones */}
-        <section className="py-16 md:py-24 relative">
+        <section className="py-10 md:py-16 relative">
           {/* Background glow */}
           <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-green-500/5 rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
@@ -316,13 +338,13 @@ export default async function Home() {
             {/* Info Cards Compactos */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-10 md:mt-12 text-left">
               <AnimateIn delay={0.1}>
-                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-white/15 p-4 rounded-2xl flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5">
-                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-primary/10 flex items-center justify-center shrink-0 transition-colors duration-300">
-                    <Phone className="w-4 h-4 text-white/40 group-hover:text-primary transition-colors duration-300" />
+                <div className="group shimmer-border bg-white/[0.03] border border-white/5 hover:border-green-500/20 p-4 rounded-2xl flex items-center gap-4 transition-all duration-300 hover:-translate-y-0.5">
+                  <div className="w-9 h-9 rounded-full bg-white/5 group-hover:bg-green-500/10 flex items-center justify-center shrink-0 transition-colors duration-300">
+                    <MessageCircle className="w-4 h-4 text-white/40 group-hover:text-green-400 transition-colors duration-300" />
                   </div>
                   <div>
-                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Ligar Agora</p>
-                    <p className="text-[10px] font-bold text-white">{formattedPhone}</p>
+                    <p className="text-[8px] font-black uppercase tracking-widest text-white/30">Suporte</p>
+                    <p className="text-[10px] font-bold text-white group-hover:text-green-400 transition-colors">Via WhatsApp</p>
                   </div>
                 </div>
               </AnimateIn>
@@ -358,15 +380,50 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Glow Line Separator */}
+        {/* DEPOIMENTOS — Prova Social Real (Via Imagem para Google Ads Compliance) */}
+        <section className="py-10 md:py-16 relative z-20">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+          <div className="max-w-[1000px] mx-auto px-4 relative z-10">
+            <AnimateIn>
+              <div className="text-center mb-10 md:mb-16">
+                <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-2">O Que Dizem</h2>
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-bold text-white/30 italic">Avaliações reais dos nossos clientes</p>
+              </div>
+            </AnimateIn>
+
+            <AnimateIn delay={0.1}>
+              <ImageModal
+                src="/services/avaliacoes.webp"
+                alt="Avaliações de Clientes"
+                className="rounded-3xl sm:rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+              >
+                <div className="group relative w-full h-[300px] md:h-[500px] rounded-3xl sm:rounded-[40px] overflow-hidden bg-black/60 backdrop-blur-2xl border-2 border-white/10 hover:border-yellow-500/50 hover:shadow-[0_0_60px_rgba(234,179,8,0.2)] transition-all duration-700 card-3d flex items-center justify-center">
+                  <Image
+                    src="/services/avaliacoes.webp"
+                    alt="Avaliações de Clientes"
+                    fill
+                    sizes="100vw"
+                    className="object-contain p-4 md:p-8 group-hover:scale-[1.02] transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+                </div>
+              </ImageModal>
+              <div className="mt-6 text-center md:hidden">
+                <p className="text-[10px] text-white/60 font-black uppercase tracking-widest bg-white/10 inline-block px-5 py-2 rounded-full backdrop-blur-sm border border-white/5 shadow-lg">Toque para ampliar</p>
+              </div>
+            </AnimateIn>
+          </div>
+        </section>
+
+        {/* Glow Line Separator (Mantido apenas antes do footer/CTA final) */}
         <GlowLine />
 
         {/* CARDS DE CONTATO — Glass (Estilo LP-Base) */}
-        <section className="py-10 md:py-16">
+        <section className="py-8 md:py-12">
           <div className="max-w-4xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-
-              {/* WhatsApp Card */}
+            <div className="max-w-2xl mx-auto">
+              {/* Single WhatsApp Card */}
               <AnimateIn delay={0.1}>
                 <WhatsAppLink
                   phone={whatsappNumber}
@@ -377,32 +434,13 @@ export default async function Home() {
                   <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-green-500/20 group-hover:scale-110 transition-all duration-300 pointer-events-none">
                     <MessageCircle className="w-7 h-7 text-green-400 pointer-events-none" />
                   </div>
-                  <h2 className="text-xl font-black uppercase mb-2 pointer-events-none text-white">WhatsApp</h2>
-                  <p className="text-[9px] uppercase font-bold tracking-widest text-white/30 mb-6 pointer-events-none">Resposta em 5 minutos</p>
-                  <span className="bg-white/5 text-[9px] font-black px-6 py-2 rounded-full uppercase tracking-widest group-hover:bg-green-500 group-hover:text-black transition-colors pointer-events-none text-white">
-                    Agendar Avaliação
+                  <h2 className="text-2xl font-black uppercase mb-2 pointer-events-none text-white">Chamar no WhatsApp</h2>
+                  <p className="text-[10px] uppercase font-bold tracking-widest text-green-400/80 mb-6 pointer-events-none">Atendimento Hoje • Resposta em 5 min</p>
+                  <span className="bg-white/5 text-[10px] font-black px-8 py-3 rounded-full uppercase tracking-widest group-hover:bg-green-500 group-hover:text-black transition-colors pointer-events-none text-white">
+                    Falar com Técnico
                   </span>
                 </WhatsAppLink>
               </AnimateIn>
-
-              {/* Instagram Card */}
-              <AnimateIn delay={0.2}>
-                <a
-                  href="https://instagram.com/wfixtech"
-                  target="_blank"
-                  className="card-3d card-glow-border-instagram group bg-white/[0.03] backdrop-blur-xl border border-pink-500/20 hover:border-pink-500/30 p-8 rounded-[30px] flex flex-col items-center text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-tr from-yellow-400/20 via-pink-500/20 to-purple-600/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-gradient-to-tr group-hover:from-yellow-400/20 group-hover:via-pink-500/20 group-hover:to-purple-600/20 group-hover:shadow-[0_0_40px_rgba(236,72,153,0.4)] transition-all duration-500 animate-float-subtle" style={{ animationDelay: '1s' }}>
-                    <Instagram className="w-7 h-7 text-pink-400 group-hover:text-pink-400 group-hover:scale-110 transition-all duration-300" />
-                  </div>
-                  <h2 className="text-xl font-black uppercase mb-2 text-white">Instagram</h2>
-                  <p className="text-[9px] uppercase font-bold tracking-widest text-white/30 mb-6">Conheça nosso trabalho</p>
-                  <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-[9px] font-black px-6 py-2 rounded-full uppercase tracking-widest group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-purple-600 group-hover:text-white transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.4)]">
-                    Seguir Perfil
-                  </span>
-                </a>
-              </AnimateIn>
-
             </div>
           </div>
         </section>
